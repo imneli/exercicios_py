@@ -1,3 +1,8 @@
+# -> Identificar produto que tem o preço maior
+# -> Inverter listas
+# -> Funções
+
+
 def exemplo_carros():
 
     carros = ['Up', 'Gol', 'Celtinha', 'Kombi', 'Uno'] #vai cair no cp
@@ -13,10 +18,6 @@ def exemplo_carros():
             indice_maior = i
 
     print(f"\n-> {carros[indice_maior]}", f"\n-> R$ {preco[indice_maior]:.2f}")
-
-
-
-# exemplo_carros()
 
 
 def ultimo_elemento():
@@ -41,4 +42,31 @@ def ultimo_elemento():
     print(f"Lista Invertida -> {lista}")
 
 
-ultimo_elemento()
+def printar_oi(frase):
+    print(frase)
+
+    return
+# printar_oi([1, 2, 3, 'teste'])
+
+
+def verificar_par(num):
+    if num % 2 == 0:
+        print(f"{num} é par")
+    else:
+        print(f"{num} é impar")
+    return
+# verificar_par(7)
+
+def vogal_ou_nao(letra):
+    vogais = ['a', 'e', 'i', 'o', 'u']
+    if letra in vogais:
+        print(f"{letra} é uma vogal")
+    else:
+        print(f"{letra} é consoante")
+    return
+vogal_ou_nao('y')
+
+
+# ultimo_elemento()
+# exemplo_carros()
+
