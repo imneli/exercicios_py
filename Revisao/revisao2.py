@@ -126,7 +126,7 @@ def ex_03():
 
     print(counter)
 
-# ex_03()
+ex_03()
 
 def ex_04():
     alvo = 1
