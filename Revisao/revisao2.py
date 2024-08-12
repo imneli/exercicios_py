@@ -140,4 +140,14 @@ def ex_04():
             i += 1
         alvo += 1
 
-ex_04()
+# ex_04()
+
+list=[10, 20, 30]
+
+def sum(list): 
+    num = 0
+    for i in list:
+        num += i
+    print(num)
+
+sum(list)
