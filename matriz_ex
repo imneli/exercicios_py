@@ -21,6 +21,24 @@ def generate_matriz(x, y):
         rows.append(0)
     for j in range(y):
         print(matriz)
-generate_matriz(5, 5)
+generate_matriz(10, 10)
+
+def matriz_identidade(n):
+    matriz = [[1 if i == j else 0 for j in range(n)] for i in range(n)]
+    for linha in matriz:
+        print(linha)
+
+matriz_identidade(5) 
+
+def generate_matriz_zeros(x, y):
+    matriz = [[0 for i in range(y)] for j in range(x)]
+    
+    for linha in matriz:
+        print(linha)
+
+generate_matriz_zeros(10, 10)  
+
+
+
 
 
