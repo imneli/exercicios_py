@@ -60,14 +60,38 @@ def find_src_recursive(init, end, num):
             end = attempt
         else:
             init = attempt
-        attempt = find_src_recursive(init,end,num)        
+        attempt = find_src_recursive(init,end,num)
     return attempt
 
 
+def quick_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    pivo = arr[0]
+    min = [elem for elem in arr if elem < pivo]
+    max = [elem for elem in arr if elem > pivo]
 
-arr = [4, 3, 9, 1, 8, 2]
-bubble_sort(arr)
+    min = quick_sort(min)
+    max = quick_sort(max)
 
+    ordered = min + [pivo] + max
+    return ordered
+
+def binary_search(arr, target):
+    init = arr[0]
+    end = arr[len(arr) -1]
+
+    attempt = (init + end ) // 2
+
+    if arr[attempt] == target:
+        return print(f"your index is {attempt}")
+    else:
+        if arr[attempt] > target:
+            end = arr[attempt -1:]
+        else:
+            init = arr[attempt +1:]
+    return attempt
+
+arr = [4, 3, 9, 1, 8, 2, 5]
+print(binary_search([1,2,3,4,5], 5))
 print(f"The ordered arr is: \n-> {arr}")
-
-
