@@ -32,8 +32,9 @@ def bubble_sort(arr):
                 arr[j + 1], arr[j] = arr[j], arr[j + 1]
                 changes += 1
                 print(f"changes \n->{changes}")
-            if changes == 0:
-                return
+        if changes == 0:
+            print("Não teve mudanças")
+            return
 
 def find_src(num):
     init = 0
@@ -52,10 +53,7 @@ def verify_num_recursive(msg):
         num = verify_num_recursive(msg)
     return int(num)
 
-print(find_src(10))
-arr = [4,3,9,1,8,2]
+arr = [4, 3, 9, 1, 8, 2]
 bubble_sort(arr)
-print(arr)
-
 
 print(f"The ordered arr is: \n-> {arr}")
