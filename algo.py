@@ -53,7 +53,21 @@ def verify_num_recursive(msg):
         num = verify_num_recursive(msg)
     return int(num)
 
+def find_src_recursive(init, end, num):
+    attempt = (init + end) / 2
+    if end - init > 0.001:
+        if attempt**2 > 25**2:
+            end = attempt
+        else:
+            init = attempt
+        attempt = find_src_recursive(init,end,num)        
+    return attempt
+
+
+
 arr = [4, 3, 9, 1, 8, 2]
 bubble_sort(arr)
 
 print(f"The ordered arr is: \n-> {arr}")
+
+
